@@ -1,4 +1,5 @@
 import Image from 'next/image';
+import ContactForm from './ContactForm';
 const ContactInfo = () => {
     return (
         <div>
@@ -97,7 +98,7 @@ const ContactInfo = () => {
             <div className="contact-form-wrapper style1">
                 <div className="row gy-5 gx-60">
                     <div className="col-xl-6">
-                        <div className="contactImg"><Image src="/assets/images/project/projectThumb1_1.jpg" className='img-fluid thumb rounded-4' alt="img" width={635} height={660}   /></div>
+                        <div className="contactImg"><Image src="/assets/images/about/contact.webp" className='img-fluid thumb' alt="img" width={900} height={735}   /></div>
                     </div>
                     <div className="col-xl-6">
                         <div className="contact-form style1">
@@ -107,34 +108,7 @@ const ContactInfo = () => {
                             <p className="desc">Nullam varius, erat quis iaculis dictum, eros urna varius eros, ut blandit
                                 felis odio in turpis. Quisque rhoncus,</p>
 
-                            <form id="contact-form" className="contact-form-items">
-                                <div className="row g-4">
-                                    <div className="col-lg-6 wow fadeInUp" data-wow-delay=".3s">
-                                        <div className="form-clt">
-                                            <span>Your name*</span>
-                                            <input type="text" name="name" id="name" placeholder="Your Name" />
-                                        </div>
-                                    </div>
-                                    <div className="col-lg-6 wow fadeInUp" data-wow-delay=".5s">
-                                        <div className="form-clt">
-                                            <span>Your Email*</span>
-                                            <input type="text" name="email2" id="email2" placeholder="Your Email" />
-                                        </div>
-                                    </div>
-                                    <div className="col-lg-12 wow fadeInUp" data-wow-delay=".7s">
-                                        <div className="form-clt">
-                                            <span>Write Message*</span>
-                                            <textarea name="message" id="message"
-                                                placeholder="Write Message"></textarea>
-                                        </div>
-                                    </div>
-                                    <div className="col-lg-7 wow fadeInUp" data-wow-delay=".9s">
-                                        <button type="submit" className="theme-btn">
-                                            Send Message <i className="bi bi-arrow-right"></i>
-                                        </button>
-                                    </div>
-                                </div>
-                            </form>
+                            <ContactForm />
                         </div>
                     </div>
                 </div>

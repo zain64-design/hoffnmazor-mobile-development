@@ -34,7 +34,7 @@ const Feature1 = () => {
                                     ></FeatureCard> 
                                 </div>
                             </div>
-                            <div className="col-xl-4 d-flex justify-content-center">
+                            <div className="col-xl-4 d-flex justify-content-center align-items-start">
                                 <div className="wcu-thumb wow fadeInUp" data-wow-delay=".2s">
                                     <div className="main-thumb wow bounceInUp" data-wow-delay=".6s">
                                     <Image src="/assets/images/wcu/wcuThumb1_1.png" alt="img" width={376} height={342}   />

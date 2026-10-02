@@ -15,7 +15,7 @@ const HeroBanner1 = ({subtitle,title,content,btnname,btnurl,btntwo,btn2url,cusim
                     <div className="shape5 d-none d-xxl-block cir36"><Image src="/assets/images/shape/introShape1_5.png" alt="img" width={57} height={58}   /></div>
                     <div className="container">
                         <div className="row">
-                            <div className="col-xl-7 order-2 order-xl-1">
+                            <div className="col-lg-6 col-xl-7 order-2 order-lg-1">
                                 <div className="intro-content">
                                     <div className="intro-section-title">
                                         <div className="intro-subtitle">
@@ -103,7 +103,7 @@ const HeroBanner1 = ({subtitle,title,content,btnname,btnurl,btntwo,btn2url,cusim
                                     </div>
                                 </div>
                             </div>
-                            <div className="col-xl-5 order-1 order-xl-2">
+                            <div className="col-lg-6 col-xl-5 order-1 order-lg-2">
                                 <div className="intro-thumb">
                                     <div className="thumbShape1"><Image src="/assets/images/shape/introThumbShape1_1.png" alt="img" width={624} height={624}   /></div>
                                     <div className="thumbShape2"><Image src="/assets/images/shape/introThumbShape1_2.png" alt="img" width={536} height={537}   /></div>

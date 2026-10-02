@@ -17,7 +17,7 @@ const About1 = ({img1,img2,subtitle,title,content,FeatureList,btnname,btnurl}) =
                                     <Image src="/assets/images/shape/aboutThumbShape1_22.png" alt="img" width={24} height={24}   />
                                         </div>
                                     <div className="thumbShape3 d-none d-xxl-block cir36 float-bob-y">
-                                    <Image src="/assets/images/shape/aboutThumbShape1_3.png" alt="img" width={200} height={200}   />
+                                    <Image src="/assets/images/shape/aboutThumbShape1_3.png" alt="img" width={100} height={100}   />
                                         </div>
                                     <div className="thumbShape4 d-none d-xxl-block cir36">
                                     <Image src="/assets/images/shape/aboutThumbShape1_4.png" alt="img" width={28} height={28}   />

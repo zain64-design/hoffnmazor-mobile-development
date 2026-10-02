@@ -22,8 +22,8 @@ const Footer = () => {
                                 <p className="wow fadeInLeft" data-wow-delay=".3s">
                                     Copyright © Hoffnmazor All rights
                                 </p>
-                                <li><a href="void:;" className="text-capitalize">terms & conditions</a></li>
-                                <li><a href="void:;" className="text-capitalize">privacy policy</a></li>
+                                <li><a href="https://www.hoffnmazor.com/terms-conditions" target="_blank" className="text-capitalize">terms & conditions</a></li>
+                                <li><a href="https://www.hoffnmazor.com/privacy-policy" target="_blank" className="text-capitalize">privacy policy</a></li>
                             </ul>
                         </div>
                     </div>

@@ -15,13 +15,13 @@ const page = () => {
             <div className="container">
                 <div className="row justify-content-center">
                     <div className="col-xl-6 col-lg-8 col-md-10 text-center">
-                        <Link href="/" className="thank-you-page-logo d-inline-block">
+                        <Link href="/" className="thank-you-page-logo">
                             <Image src="/assets/images/logo/main-logo.webp" className="img-fluid" alt="logo" width={240} height={65} priority />
                         </Link>
+                        <h1 className="thank-you-page-title">Thank You!</h1>
                         <div className="thank-you-page-icon">
                             <i className="bi bi-check-lg"></i>
                         </div>
-                        <h1 className="thank-you-page-title">Thank You!</h1>
                         <p className="thank-you-page-text">
                             We have received your message and our team will contact you shortly.
                         </p>

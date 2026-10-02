@@ -5917,7 +5917,7 @@ input.main-search-input::placeholder {
   padding: 223px 0 0;
   z-index: 3;
 }
-@media (max-width: 767px) {
+@media (max-width: 1199px) {
   .intro-wrapper.style1 .intro-thumb {
     padding: 160px 0 0;
   }
@@ -5925,10 +5925,13 @@ input.main-search-input::placeholder {
 .intro-wrapper.style1 .intro-thumb .main-thumb {
   position: relative;
   z-index: 3;
+      margin: 0 auto;
+    display: block;
 }
-@media (max-width: 767px) {
+@media (max-width: 1199px) {
   .intro-wrapper.style1 .intro-thumb .main-thumb {
     max-width: 100%;
+    height: auto;
   }
 }
 .intro-wrapper.style1 .intro-thumb .thumbShape1 {
@@ -6304,8 +6307,8 @@ input.main-search-input::placeholder {
 }
 .about-wrapper.style1 .about-thumb .thumbShape3 {
   position: absolute;
-  top: -10px;
-  left: -20px;
+  top: 20px;
+  left: 20px;
   z-index: 1;
 }
 .about-wrapper.style1 .about-thumb .thumbShape4 {
@@ -6323,6 +6326,7 @@ input.main-search-input::placeholder {
 @media (max-width: 767px) {
   .about-wrapper.style1 .about-thumb .main-thumb img {
     max-width: 100%;
+    height: auto;
   }
 }
 .about-wrapper.style1 .about-thumb .absolute-thumb {
@@ -6515,6 +6519,7 @@ input.main-search-input::placeholder {
   position: absolute;
   bottom: 0;
   right: 0;
+  z-index: -1;
 }
 .work-process-wrapper.style1 .shape img {
   max-width: 100%;
@@ -6735,7 +6740,8 @@ input.main-search-input::placeholder {
 }
 .wcu-wrapper.style1 .wcu-thumb .shape {
   position: absolute;
-  bottom: -20px;
+  top: 0;
+  bottom: auto;
   max-width: 100%;
   z-index: 1;
 }
@@ -6956,6 +6962,7 @@ input.main-search-input::placeholder {
 }
 .faq-wrapper.style1 .faq-thumb .main-thumb {
   position: relative;
+  object-fit: contain;
   z-index: 1;
   margin-left: 150px;
   border-radius: 30px;
@@ -7882,6 +7889,7 @@ input.main-search-input::placeholder {
 @media (max-width: 1199px) {
   .cta-wrapper.style1 .cta-thumb img {
     max-width: 100%;
+    height: auto;
   }
 }
 .cta-wrapper.style2 {
@@ -9909,21 +9917,13 @@ input.main-search-input::placeholder {
   font-weight: 600;
   text-transform: capitalize;
 }
+
 .contact-form.style1 .contact-form-items .form-clt input,
 .contact-form.style1 .contact-form-items .form-clt textarea {
-  border: 1px solid var(--border);
-  color: var(--text);
-  padding: 18px 20px;
   border-radius: 5px;
 }
-.contact-form.style1 .contact-form-items .form-clt input::placeholder,
-.contact-form.style1 .contact-form-items .form-clt textarea::placeholder {
-  color: var(--text);
-}
 .contact-form.style1 .contact-form-items .form-clt textarea {
-  padding-bottom: 150px;
-  height: 200px;
-  padding: 18px 20px;
+  height: auto;
 }
 
 /* 35.Input */
@@ -9934,7 +9934,7 @@ select,
 textarea,
 input {
   height: 56px;
-  padding: 0 20px;
+  padding: 10px 20px;
   border: 1px solid var(--border);
   color: var(--text);
   background-color: transparent;
@@ -10064,17 +10064,6 @@ select.style-white2:after {
 
 .single-select {
   background-image: none !important;
-}
-
-textarea.form-control,
-textarea {
-  min-height: 150px;
-  padding-top: 16px;
-  padding-bottom: 17px;
-}
-textarea.form-control.style2,
-textarea.style2 {
-  min-height: 105px;
 }
 
 .form-group {
@@ -11378,7 +11367,8 @@ textarea.is-invalid {
 }
 .error-page-logo,
 .thank-you-page-logo {
-  margin-bottom: 40px;
+  margin-bottom: 20px;
+  display: block;
 }
 .error-page-code {
   color: var(--theme);
@@ -11396,10 +11386,10 @@ textarea.is-invalid {
   width: 100px;
   height: 100px;
   border-radius: 50%;
-  background: rgba(116, 68, 253, 0.15);
-  color: var(--theme);
+  background: var(--theme);
+  color: var(--title);
   font-size: 50px;
-  margin-bottom: 25px;
+  margin: 0 0 15px 15px;
 }
 .error-page-title,
 .thank-you-page-title {
@@ -11409,6 +11399,7 @@ textarea.is-invalid {
   line-height: normal;
   letter-spacing: -0.96px;
   margin-bottom: 15px;
+  display: inline-block;
 }
 .error-page-text,
 .thank-you-page-text {
@@ -11435,4 +11426,19 @@ textarea.is-invalid {
   .thank-you-page-title {
     font-size: 32px;
   }
+}
+
+/* Contact form phone field (intl-tel-input) */
+.contact-form.style1 .contact-form-items .form-clt .iti {
+  width: 100%;
+  display: block;
+}
+.contact-form.style1 .contact-form-items .form-clt .iti input {
+  width: 100%;
+  height: 56px;
+  padding-right: 20px;
+}
+.contact-form.style1 .contact-form-items .form-clt .iti__country-container,
+.contact-form.style1 .contact-form-items .form-clt .iti__dropdown-content span {
+  color: var(--text);
 }

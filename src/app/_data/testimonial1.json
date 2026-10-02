@@ -1,38 +1,38 @@
 [
   {
-    "img": "/assets/images/testimoial/testimonialProfileThumb1_1.jpg",
-    "subTitle": "Team Leader",
-    "title": "Jacob Jones",
-    "desc": "Hoffnmazor turned our rough idea into a polished app in a few weeks. Communication was clear and the final result was better than we expected."  
+    "img": "/assets/images/testimoial/ts1.png",
+    "subTitle": "Product Manager",
+    "title": "Samuel K",
+    "desc": "They nailed it. I had a rough idea, and they turned it into something way better than I imagined. Smooth process, great team!"  
   },
   {
-    "img": "/assets/images/testimoial/testimonialProfileThumb1_2.jpg",
-    "subTitle": "Team Leader",
-    "title": "Masirul Jones",
-    "desc": "The team was professional, quick to respond and delivered on time. Our users love the app's speed and design."
+    "img": "/assets/images/testimoial/ts2.png",
+    "subTitle": "COO",
+    "title": "Jordan T",
+    "desc": "Couldn’t be happier with the app! It’s exactly what we needed and works perfectly. They were on point every step of the way."
   },
   {
-    "img": "/assets/images/testimoial/testimonialProfileThumb1_3.jpg",
-    "subTitle": "Team Leader",
-    "title": "Adam Jones",
-    "desc": "From design to launch, everything was smooth. We highly recommend Hoffnmazor for mobile app development."
+    "img": "/assets/images/testimoial/ts3.png",
+    "subTitle": "Founder & CEO",
+    "title": "Lisa M",
+    "desc": "This team gets it. From start to finish, they made everything easy. My app looks amazing and runs even better!"
   },
   {
-    "img": "/assets/images/testimoial/testimonialProfileThumb1_1.jpg",
-    "subTitle": "Team Leader",
-    "title": "Wade Warren",
-    "desc": "There are many variations of passages of Lorem Ipsum available,a but chiropractor like majority have a suffered alteration in some form, by injected humour" 
+    "img": "/assets/images/testimoial/ts4.png",
+    "subTitle": "Chief Technology Officer",
+    "title": "Claire R",
+    "desc": "I was blown away by their attention to detail. They took the time to understand my vision and brought it to life with zero shortcuts." 
   }, 
   {
-    "img": "/assets/images/testimoial/testimonialProfileThumb1_2.jpg",
-    "subTitle": "Team Leader",
-    "title": "Masirul Jones",
-    "desc": "There are many variations of passages of Lorem Ipsum available,a but chiropractor like majority have a suffered alteration in some form, by injected humour"
+    "img": "/assets/images/testimoial/ts5.png",
+    "subTitle": "Head of Product Development",
+    "title": "Mariah D",
+    "desc": "If you’re looking for a team that really listens and delivers, look no further. They created something truly unique for us."
   },
   {
-    "img": "/assets/images/testimoial/testimonialProfileThumb1_3.jpg",
-    "subTitle": "Team Leader",
-    "title": "Adam Jones",
-    "desc": "There are many variations of passages of Lorem Ipsum available,a but chiropractor like majority have a suffered alteration in some form, by injected humour"
+    "img": "/assets/images/testimoial/ts6.png",
+    "subTitle": "Chief Executive Officer",
+    "title": "Kevin S",
+    "desc": "The whole experience was seamless. They kept me updated, met every deadline, and the final product speaks for itself. Highly recommend!"
   }  
 ]
