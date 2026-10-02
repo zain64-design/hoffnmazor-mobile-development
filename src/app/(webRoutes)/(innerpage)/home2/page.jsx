@@ -1,14 +1,14 @@
 import React from 'react';
-import HeroBanner2 from '../_components/HeroBanner/HeroBanner2';
-import About2 from '../_components/About/About2';
-import Feature3 from '../_components/Feature/Feature3';
-import HowWork2 from '../_components/HowWork/HowWork2';
-import Choose2 from '../_components/Choose/Choose2';
-import Choose3 from '../_components/Choose/Choose3';
-import Pricing2 from '../_components/Pricing/Pricing2';
-import Testimonial2 from '../_components/Testimonial/Testimonial2';
-import Brand2 from '../_components/Brand/Brand2';
-import Blog1 from '../_components/Blog/Blog1';
+import HeroBanner2 from '../../../_components/HeroBanner/HeroBanner2';
+import About2 from '../../../_components/About/About2';
+import Feature3 from '../../../_components/Feature/Feature3';
+import HowWork2 from '../../../_components/HowWork/HowWork2';
+import Choose2 from '../../../_components/Choose/Choose2';
+import Choose3 from '../../../_components/Choose/Choose3';
+import Pricing2 from '../../../_components/Pricing/Pricing2';
+import Testimonial2 from '../../../_components/Testimonial/Testimonial2';
+import Brand2 from '../../../_components/Brand/Brand2';
+import Blog1 from '../../../_components/Blog/Blog1';
 
 const page = () => {
     return (

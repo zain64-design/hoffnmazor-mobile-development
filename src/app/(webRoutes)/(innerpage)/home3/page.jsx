@@ -1,15 +1,15 @@
 import React from 'react';
-import HeroBanner3 from '../_components/HeroBanner/HeroBanner3';
-import Feature4 from '../_components/Feature/Feature4';
-import Feature5 from '../_components/Feature/Feature5';
-import Feature6 from '../_components/Feature/Feature6';
-import HowWork3 from '../_components/HowWork/HowWork3';
-import Pricing3 from '../_components/Pricing/Pricing3';
-import Counter1 from '../_components/Counter/Counter1';
-import About3 from '../_components/About/About3';
-import Brand3 from '../_components/Brand/Brand3';
-import Testimonial3 from '../_components/Testimonial/Testimonial3';
-import Blog1 from '../_components/Blog/Blog1';
+import HeroBanner3 from '@/app/_components/HeroBanner/HeroBanner3';
+import Feature4 from '@/app/_components/Feature/Feature4';
+import Feature5 from '@/app/_components/Feature/Feature5';
+import Feature6 from '@/app/_components/Feature/Feature6';
+import HowWork3 from '@/app/_components/HowWork/HowWork3';
+import About3 from '@/app/_components/About/About3';
+import Testimonial from '@/app/_components/Testimonial/Testimonial';
+import Cta1 from '@/app/_components/Cta/Cta1';
+import ContactInfo from '@/app/_components/ContactInfo/ContactInfo';
+import Faq1 from '@/app/_components/Faq/Faq1';
+import Brand3 from '@/app/_components/Brand/Brand3';
 
 const page = () => {
     return (
@@ -25,7 +25,18 @@ const page = () => {
                 btnurl2="/about"
                 img1="/assets/images/hero/01.png"
                 img2="/assets/images/hero/mobile.png"
-            ></HeroBanner3>  
+            />
+                        <About3
+                img1="/assets/images/what-do.png"
+                subtitle="What We Do"
+                title="We offer a one-stop shop for all IT solutions."
+                content="There are many variations of passages of Lorem Ipsum available, but the majority have suffered alteration in some form"
+                boxtitle1="Highly Expert Team Members"
+                boxcontent1="There are many variations of passages of Lorem Ipsum available, but the majority have suffered alteration in some form"
+                boxtitle2="Highly Expert Team Members"
+                boxcontent2="There are many variations of passages of Lorem Ipsum available, but the majority have suffered alteration in some form"
+            />
+                        <Brand3/>
             <Feature4
                 img="/assets/images/about/01.png"
                 subtitle="Our Features"
@@ -39,25 +50,21 @@ const page = () => {
                 ]} 
                 btnname="Learn More"
                 btnurl="/about"
-            ></Feature4>  
-            <Feature5></Feature5>
-            <Feature6></Feature6>
-            <HowWork3></HowWork3>
-            <Pricing3></Pricing3>
-            <Counter1></Counter1> 
-            <About3
-                img1="/assets/images/what-do.png"
-                subtitle="What We Do"
-                title="We offer a one-stop shop for all IT solutions."
-                content="There are many variations of passages of Lorem Ipsum available, but the majority have suffered alteration in some form"
-                boxtitle1="Highly Expert Team Members"
-                boxcontent1="There are many variations of passages of Lorem Ipsum available, but the majority have suffered alteration in some form"
-                boxtitle2="Highly Expert Team Members"
-                boxcontent2="There are many variations of passages of Lorem Ipsum available, but the majority have suffered alteration in some form"
-            ></About3>
-            <Brand3></Brand3>
-            <Testimonial3></Testimonial3> 
-            <Blog1></Blog1>                              
+            />  
+            <Feature5/>
+            <Feature6/>
+            <HowWork3/>
+                        <Testimonial />
+            <Faq1 />
+            <Cta1
+                subtitle="Let's Talk"
+                title="Ready To Launch Your App? Let's Build It Together!"
+                content="Book a free consultation with our experts and get a clear roadmap, timeline and estimate for your app idea."
+                btnurl1=""
+                btnurl2=""
+                img="/assets/images/cta/ctaThumb1_1.png"
+            />
+            <ContactInfo />                            
         </div>
     );
 };

@@ -1,15 +1,13 @@
 import React from 'react';
-import HeroBanner1 from '../_components/HeroBanner/HeroBanner1';
-import About1 from '../_components/About/About1';
-import HowWork from '../_components/HowWork/HowWork';
-import Choose1 from '../_components/Choose/Choose1';
-import Feature1 from '../_components/Feature/Feature1';
-import Counter1 from '../_components/Counter/Counter1';
-import Faq1 from '../_components/Faq/Faq1';
-import Testimonial from '../_components/Testimonial/Testimonial';
-import Feature2 from '../_components/Feature/Feature2';
+import HeroBanner1 from '@/app/_components/HeroBanner/HeroBanner1';
+import About1 from '@/app/_components/About/About1';
+import HowWork from '@/app/_components/HowWork/HowWork';
+import Choose1 from '@/app/_components/Choose/Choose1';
+import Feature1 from '@/app/_components/Feature/Feature1';
+import Faq1 from '@/app/_components/Faq/Faq1';
+import Testimonial from '@/app/_components/Testimonial/Testimonial';
 import ContactInfo from '@/app/_components/ContactInfo/ContactInfo';;
-import Cta1 from '../_components/Cta/Cta1';
+import Cta1 from '@/app/_components/Cta/Cta1';
 
 const page = () => {
     return (
