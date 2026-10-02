@@ -35,8 +35,7 @@ export async function POST(request) {
       country,
       zip_code,
       brand_name: "hoffnmazor.com",
-      // lead_area: "https://hoffnmazor-mobile-development.vercel.app/",
-      lead_area: "https://hoffnmazor-mobile-development.com/",
+      lead_area: "https://hoffnmazor-mobile-development.vercel.app",
     });
 
     const controller = new AbortController();
