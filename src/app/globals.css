@@ -56,9 +56,9 @@ Description: Niotech - sass, App Landing Reactjs Template <
   --body: #fff;
   --black: #000;
   --white: #fff;
-  --theme: #02dfbf;
+  --theme: #02e3c3;
   --theme2: #F9F3EF;
-  --theme3: #FAF8FF;
+    --theme3: rgba(2, 177, 151, 0.06);
   --title: #282C32;
   --header: #282C32;
   --orange: #e78c45;
@@ -71,6 +71,7 @@ Description: Niotech - sass, App Landing Reactjs Template <
   --border-5: #565656;
   --bg-1: #161921;
   --bg-2: #F6F7FF;
+  --bg-title: #303030;
   --box-shadow: 0px 4px 25px 0px rgba(0, 0, 0, 0.06);
 }
 
@@ -439,7 +440,7 @@ input[type=radio]:checked ~ label::before {
   height: 50px;
   align-content: center;
   gap: 10px;
-  color: var(--white);
+  color: var(--title);
   font-family: "Urbanist", sans-serif;
   text-align: center;
   font-size: 16px;
@@ -458,8 +459,10 @@ input[type=radio]:checked ~ label::before {
   -ms-transition: all 0.3s ease-in-out;
   -o-transition: all 0.3s ease-in-out;
 }
-.theme-btn i, .theme-btn svg {
+.theme-btn i, .theme-btn svg,.theme-btn svg g path {
   margin-left: 6px;
+  color: currentColor;
+      fill: currentColor;
 }
 .theme-btn:before {
   transition-duration: 800ms;
@@ -497,9 +500,11 @@ input[type=radio]:checked ~ label::before {
   -ms-transition: all 0.4s;
   -o-transition: all 0.4s;
 }
+.theme-btn.style2:hover,
 .theme-btn.style2:hover svg path,
 .theme-btn.style2:hover svg rect {
-  fill: var(--white);
+  color: var(--title) !important;
+  border: 1px solid var(--theme);
 }
 .theme-btn.style3 {
   display: flex;
@@ -515,7 +520,7 @@ input[type=radio]:checked ~ label::before {
 }
 .theme-btn.style3:before {
   transition-duration: 800ms;
-  background: var(--theme);
+  background: var(--white);
 }
 .theme-btn.style3 svg path,
 .theme-btn.style3 svg rect {
@@ -525,10 +530,11 @@ input[type=radio]:checked ~ label::before {
   -moz-transition: all 0.4s;
   -ms-transition: all 0.4s;
   -o-transition: all 0.4s;
-}
+}.theme-btn.style3:hover,
 .theme-btn.style3:hover svg path,
 .theme-btn.style3:hover svg rect {
   fill: var(--white);
+  color: var(--title) !important;
 }
 .theme-btn.style4 {
   display: flex;
@@ -2614,8 +2620,8 @@ input[type=radio]:checked ~ label::before {
   align-items: center;
   gap: 10px;
   border-radius: 100px;
-  background: rgba(116, 68, 253, 0.15);
-  color: var(--theme);
+  background: var(--bg-title);
+  color: var(--white);
   font-family: "Urbanist", sans-serif;
   font-size: 16px;
   font-style: normal;
@@ -2626,7 +2632,8 @@ input[type=radio]:checked ~ label::before {
   border-radius: 100px;
 }
 .section-title .subtitle.bg2 {
-  background: rgba(255, 255, 255, 0.15);
+  background: var(--theme);
+  color: var(--title) !important;
 }
 .section-title .subtitle img {
   margin-left: 3px;
@@ -5454,19 +5461,19 @@ input.main-search-input::placeholder {
   position: absolute;
   top: 40px;
   left: -40px;
-  z-index: 1;
+  z-index: -1;
 }
 .footer-widgets-wrapper.style1 .shape2 {
   position: absolute;
   bottom: -40px;
   left: 0;
-  z-index: 1;
+  z-index: -1;
 }
 .footer-widgets-wrapper.style1 .shape3 {
   position: absolute;
   top: 40px;
   right: 0;
-  z-index: 1;
+  z-index: -1;
 }
 .footer-widgets-wrapper.style1 .single-footer-widget {
   position: relative;
@@ -5771,7 +5778,7 @@ input.main-search-input::placeholder {
 .intro-wrapper.style1 {
   position: relative;
   border-radius: 50px;
-  background: rgba(116, 68, 253, 0.06);
+  background: rgba(2, 177, 151, 0.06);
   margin-top: 40px;
 }
 @media (max-width: 767px) {
@@ -5831,7 +5838,7 @@ input.main-search-input::placeholder {
   align-items: center;
   gap: 10px;
   border-radius: 30px;
-  background: #303030;
+  background: var(--bg-title);
   backdrop-filter: blur(2px);
   color: var(--white);
   font-family: "Urbanist", sans-serif;
@@ -6273,7 +6280,7 @@ input.main-search-input::placeholder {
   width: 465px;
   height: 350px;
   border-radius: 0px 0px 50px 50px;
-  background: #E8E5FD;
+  background: var(--theme3);
 }
 .about-wrapper.style1 {
   padding-top: 120px;
@@ -6447,7 +6454,7 @@ input.main-search-input::placeholder {
   margin-top: 55px;
 }
 .work-process-box.style1 .step {
-  color: var(--theme);
+  color: var(--white);
   text-align: center;
   font-family: "Urbanist", sans-serif;
   font-size: 16px;
@@ -6462,7 +6469,7 @@ input.main-search-input::placeholder {
   align-items: center;
   gap: 10px;
   border-radius: 100px;
-  background: rgba(116, 68, 253, 0.15);
+  background: var(--bg-title);
   margin-bottom: 10px;
 }
 .work-process-box.style1 .title {
@@ -6664,7 +6671,7 @@ input.main-search-input::placeholder {
 /* 20.Advantage */
 .advantage-wrapper.style1 {
   border-radius: 50px;
-  background: #FAF8FF;
+  background: var(--theme3);
 }
 .advantage-wrapper.style1 .advantage-content .checklist-wrapper {
   margin-bottom: 30px;
@@ -7098,7 +7105,7 @@ input.main-search-input::placeholder {
 .testimonial-wrapper.style1 {
   position: relative;
   border-radius: 50px;
-  background: rgba(116, 68, 253, 0.06);
+  background: var(--theme3);
 }
 .testimonial-wrapper.style1 .section-title {
   position: relative;
@@ -7109,13 +7116,13 @@ input.main-search-input::placeholder {
   position: absolute;
   bottom: 0;
   left: 0;
-  z-index: 1;
+  z-index: -1;
 }
 .testimonial-wrapper.style1 .shape2 {
   position: absolute;
   top: 0;
   right: 0;
-  z-index: 1;
+  z-index: -1;
 }
 .testimonial-wrapper.style1 .slider-pagination {
   max-width: 300px;
@@ -7831,7 +7838,7 @@ input.main-search-input::placeholder {
 .cta-wrapper.style1 {
   position: relative;
   border-radius: 50px;
-  background: var(--theme);
+  background: var(--bg-title);
   -webkit-border-radius: 50px;
   -moz-border-radius: 50px;
   -ms-border-radius: 50px;
@@ -9794,7 +9801,7 @@ input.main-search-input::placeholder {
 /* 34.Contact */
 .contact-info-box.style1 {
   padding: 12px;
-  background-color: #FAF8FF;
+  background-color: var(--theme3);
   border-radius: 10px;
   transition: all 0.4s;
   -webkit-transition: all 0.4s;
@@ -9806,8 +9813,8 @@ input.main-search-input::placeholder {
   padding: 50px 30px 30px;
   text-align: center;
   border-radius: 10px;
-  background-color: #FAF8FF;
-  border: 1px solid #E6E5E5;
+  background-color: var(--theme3);
+  border: 1px solid var(--theme);
   transition: all 0.4s;
   -webkit-transition: all 0.4s;
   -moz-transition: all 0.4s;
@@ -9818,7 +9825,7 @@ input.main-search-input::placeholder {
   margin-bottom: 40px;
 }
 .contact-info-box.style1 .contact-content .icon svg path {
-  fill: var(--theme);
+  fill: #02b198;
 }
 .contact-info-box.style1 .contact-content .title {
   margin-bottom: 10px;
@@ -9847,6 +9854,7 @@ input.main-search-input::placeholder {
 }
 .contact-info-box.style1:hover .contact-content {
   background-color: var(--theme);
+    border: 1px solid var(--white);
 }
 .contact-info-box.style1:hover .contact-content .icon svg path {
   fill: var(--white);

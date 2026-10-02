@@ -9,11 +9,11 @@ const Cta1 = ({subtitle,title,content,btnurl1,btnurl2,img}) => {
                     <div className="cta-wrapper style1  section-padding fix">
                         <div className="shape1 d-none d-xxl-block"><Image src="/assets/images/shape/ctaShape1_1.png" alt="img" width={373} height={147}   />
                         </div>
-                        <div className="shape2 d-none d-xxl-block"><Image src="/assets/images/shape/ctaShape1_2.png" alt="img" width={228} height={143}   />
+                        <div className="shape2 d-none d-xxl-block"><Image src="/assets/images/shape/ctaShape1_22.png" alt="img" width={228} height={143}   />
                         </div>
                         <div className="shape3 d-none d-xxl-block"><Image src="/assets/images/shape/ctaShape1_3.png" alt="img" width={606} height={272}   />
                         </div>
-                        <div className="shape4 d-none d-xxl-block"><Image src="/assets/images/shape/ctaShape1_4.png" alt="img" width={223} height={134}   />
+                        <div className="shape4 d-none d-xxl-block"><Image src="/assets/images/shape/ctaShape1_44.png" alt="img" width={223} height={134}   />
                         </div>
                         <div className="container">
                             <div className="row gy-5">
@@ -28,8 +28,8 @@ const Cta1 = ({subtitle,title,content,btnurl1,btnurl2,img}) => {
                                                 {content}</p>
                                         </div>
                                         <div className="d-flex gap-3">
-                                            <Link className="playstore theme-btn style4" href={btnurl1}>Book Consultation</Link>
-                                        <Link className="theme-btn style4" href={btnurl2}>Call Now</Link>
+                                            <Link className="playstore theme-btn style3" href={btnurl1}>Book Consultation</Link>
+                                        <Link className="theme-btn style3" href={btnurl2}>Call Now</Link>
                                         </div>
                                     </div>
                                 </div>

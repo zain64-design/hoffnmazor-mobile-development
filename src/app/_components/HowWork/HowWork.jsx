@@ -13,7 +13,7 @@ const HowWork = () => {
                         ></SectionTitle>
                     </div>
                     <div className="work-process-wrapper style1">
-                        <div className="shape"><Image src="/assets/images/shape/workProcessShape1_1.png" alt="img" width={1416} height={225}   /></div>
+                        <div className="shape"><Image src="/assets/images/shape/workProcessShape1_11.png" alt="img" width={1416} height={225}   /></div>
                         <div className="row">
                             <div className="col-xl-4">
                                 <div className="work-process-box style1 wow fadeInUp" data-wow-delay=".2s">

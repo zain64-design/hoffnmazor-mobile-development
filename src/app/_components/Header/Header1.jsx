@@ -42,7 +42,7 @@ export default function Header1({ variant }) {
               </div>
               <div className="cs_main_header_right">
                 <div className="header-btn d-flex align-items-center gap-3">
-                  <Link href="void:;" className="theme-btn">
+                  <Link href="void:;" className="theme-btn style2">
                     <span>
                       Book Consultation
                       <i className="bi bi-arrow-right"></i>
