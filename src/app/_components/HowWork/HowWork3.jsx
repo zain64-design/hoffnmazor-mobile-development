@@ -8,7 +8,7 @@ const HowWork3 = () => {
         <div className="container">
              <div className="section-title mb-60">
                     <SectionTitle
-                        SubTitle="How It Work"
+                        SubTitle="How It Works"
                         Title="Our Working Process"
                     ></SectionTitle>
              </div>
@@ -17,7 +17,7 @@ const HowWork3 = () => {
                      <div className="col-lg-8">
                          <div className="how-work-content">
                              <p className="text wow fadeInUp">
-                                 There are many variations of passages of Lorem Ipsum available, but the majority have suffered alteration in some form, by injected humour, or randomised words which do not look even slightly
+                                 A clear, simple process that keeps your project on time and on budget.
                              </p>
                              <div className="row g-4">
                              {data.map((item, index)=>(

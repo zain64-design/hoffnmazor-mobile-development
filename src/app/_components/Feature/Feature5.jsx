@@ -11,8 +11,8 @@ const Feature5 = () => {
                         <Image src="/assets/images/icon/01.svg" alt="img" width={40} height={40}   />
                         </div>
                         <div className="content">
-                            <h3>Create</h3>
-                            <p>There are many vriations of passages f Lorem Ipsum but the majority have</p>
+                            <h3>Plan</h3>
+                            <p>We understand your goals, audience and competitors before we write any code.</p>
                         </div>
                     </div>
                 </div>
@@ -22,8 +22,8 @@ const Feature5 = () => {
                         <Image src="/assets/images/icon/02.svg" alt="img" width={40} height={40}   />
                         </div>
                         <div className="content">
-                            <h3>Customize</h3>
-                            <p>There are many vriations of passages f Lorem Ipsum but the majority have</p>
+                            <h3>Build</h3>
+                            <p>We design and develop your site with clean, maintainable code.</p>
                         </div>
                     </div>
                 </div>
@@ -33,8 +33,8 @@ const Feature5 = () => {
                         <Image src="/assets/images/icon/03.svg" alt="img" width={40} height={40}   />
                         </div>
                         <div className="content">
-                            <h3>Say On Top</h3>
-                            <p>There are many vriations of passages f Lorem Ipsum but the majority have</p>
+                            <h3>Grow</h3>
+                            <p>We optimize speed and SEO and support you after launch.</p>
                         </div>
                     </div>
                 </div>

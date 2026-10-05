@@ -8,8 +8,8 @@ const Feature6 = () => {
         <div className="container">
             <div className="section-title text-center mxw-685 mx-auto mb-60">
                 <SectionTitle
-                    SubTitle="Our Features"
-                    Title="We Provide the Best Quality"
+                    SubTitle="Our Services"
+                    Title="Our Web Development Services"
                 ></SectionTitle>
             </div>
             <div className="row">

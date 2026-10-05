@@ -1,20 +1,20 @@
 [
   {
     "img": "/assets/images/icon/04.svg",
-    "title": "Sales automation",
-    "desc": "This title is versatile and can adapted to fit the specific tone and branding of your website quality.",
+    "title": "Custom Website Development",
+    "desc": "Tailor-made business websites and landing pages designed around your brand and goals.",
     "addclass": "feature-provide-box-items style-2"
   },
   {
     "img": "/assets/images/icon/05.svg",
-    "title": "Contact management",
-    "desc": "This title is versatile and can adapted to fit the specific tone and branding of your website quality.",
+    "title": "Web Application Development",
+    "desc": "Dashboards, portals and custom web apps built to handle your business workflows.",
     "addclass": "feature-provide-box-items"
   },
   {
     "img": "/assets/images/icon/06.svg",
-    "title": "Task Management",
-    "desc": "This title is versatile and can adapted to fit the specific tone and branding of your website quality.",
+    "title": "E-commerce Website Development",
+    "desc": "Online stores with secure payments, easy product management and a smooth checkout.",
     "addclass": "feature-provide-box-items style-2"
   } 
 ]

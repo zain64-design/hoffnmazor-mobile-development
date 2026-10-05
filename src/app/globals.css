@@ -7495,7 +7495,7 @@ input.main-search-input::placeholder {
 
 .feature-provide-box-items {
   border-radius: 16px;
-  background: #E4E6FF;
+  background: var(--bg-title);
   padding: 40px;
   position: relative;
   transition: all 0.4s ease-in-out;
@@ -7531,9 +7531,10 @@ input.main-search-input::placeholder {
 .feature-provide-box-items .content h3 {
   font-size: 24px;
   margin-bottom: 5px;
+  color:var(--white);
 }
 .feature-provide-box-items .content p {
-  color: #3F444B;
+  color:var(--white);
 }
 .feature-provide-box-items:hover {
   background-color: var(--theme);

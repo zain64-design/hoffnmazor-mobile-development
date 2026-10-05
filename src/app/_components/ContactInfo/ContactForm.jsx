@@ -27,7 +27,7 @@ const validationSchema = Yup.object({
 
 export default function ContactForm() {
   const router = useRouter();
-  const [submitStatus, setSubmitStatus] = useState("idle"); // idle | success | error
+  const [submitStatus, setSubmitStatus] = useState("idle");
   const [geoData, setGeoData] = useState({
     ip: "",
     city: "",
