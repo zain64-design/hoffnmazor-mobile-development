@@ -105,8 +105,7 @@ const ContactInfo = () => {
                             <h2 className="contact-title">
                                 Ready to Get Started?
                             </h2>
-                            <p className="desc">Nullam varius, erat quis iaculis dictum, eros urna varius eros, ut blandit
-                                felis odio in turpis. Quisque rhoncus,</p>
+                            <p className="desc">Tell us about your project and our team will get back to you shortly with the next steps.</p>
 
                             <ContactForm />
                         </div>

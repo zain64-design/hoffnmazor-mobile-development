@@ -27,7 +27,7 @@ const Faq1 = () => {
     }, [firstItemOpen]);
 
     const FaqContent = {
-        Content:'There are many variations of passages of Lorem Ipsum available, but the majority have suffered alteration in some form, by injected humour, or randomised words which do not look even slightly',
+        Content:'Quick answers to the most common questions about our app development process.',
         img1:'/assets/images/faq/faqThumb1_2.png',
         img2:'/assets/images/faq/faqThumb1_1.png'
       }
