@@ -1,25 +1,6 @@
 import { PHONE_NUMBER } from "@/app/_utils/siteConfig";
 import OpenModalButton from "./OpenModalButton";
 
-const QuoteIcon = () => (
-  <svg width="16" height="16" viewBox="0 0 24 24" fill="none" aria-hidden="true">
-    <path d="M21 11.5a8.4 8.4 0 0 1-9 8.4 8.6 8.6 0 0 1-3.9-.9L3 21l1.9-4.6A8.4 8.4 0 1 1 21 11.5z" stroke="currentColor" strokeWidth="2" strokeLinejoin="round" />
-  </svg>
-);
-
-const PhoneIcon = () => (
-  <svg width="16" height="16" viewBox="0 0 24 24" fill="none" aria-hidden="true">
-    <path d="M22 16.9v3a2 2 0 0 1-2.2 2 19.8 19.8 0 0 1-8.6-3.1 19.5 19.5 0 0 1-6-6A19.8 19.8 0 0 1 2.1 4.2 2 2 0 0 1 4.1 2h3a2 2 0 0 1 2 1.7c.1 1 .4 1.9.7 2.8a2 2 0 0 1-.5 2.1L8 9.9a16 16 0 0 0 6 6l1.3-1.3a2 2 0 0 1 2.1-.4c.9.3 1.8.6 2.8.7a2 2 0 0 1 1.7 2z" stroke="currentColor" strokeWidth="2" strokeLinejoin="round" />
-  </svg>
-);
-
-const CalendarIcon = () => (
-  <svg width="16" height="16" viewBox="0 0 24 24" fill="none" aria-hidden="true">
-    <rect x="3" y="4" width="18" height="18" rx="2" stroke="currentColor" strokeWidth="2" />
-    <path d="M16 2v4M8 2v4M3 10h18" stroke="currentColor" strokeWidth="2" strokeLinecap="round" />
-  </svg>
-);
-
 const HeadsetIcon = () => (
   <svg width="24" height="24" viewBox="0 0 24 24" fill="none" aria-hidden="true">
     <path d="M3 18v-6a9 9 0 0 1 18 0v6" stroke="currentColor" strokeWidth="2" strokeLinecap="round" />
@@ -31,8 +12,8 @@ const HeadsetIcon = () => (
 // variant "bar": slim rounded bar with one line of text and one button.
 const CtaBand = ({ variant = "bar", title, text, buttonLabel = "Get A Free Quote" }) => {
   const mainButton = (
-    <OpenModalButton className="cta-band-btn cta-band-btn-primary">
-      <QuoteIcon /> {buttonLabel}
+    <OpenModalButton className="theme-btn">
+      {buttonLabel} <i className="bi bi-arrow-right"></i>
     </OpenModalButton>
   );
 
@@ -48,12 +29,12 @@ const CtaBand = ({ variant = "bar", title, text, buttonLabel = "Get A Free Quote
             <div className="cta-band-actions">
               {mainButton}
               {PHONE_NUMBER && (
-                <a className="cta-band-btn cta-band-btn-outline" href={`tel:${PHONE_NUMBER}`}>
-                  <PhoneIcon /> Call Now
+                <a className="theme-btn style3" href={`tel:${PHONE_NUMBER}`}>
+                  Call Now <i className="bi bi-telephone"></i>
                 </a>
               )}
-              <a className="cta-band-btn cta-band-btn-light" href="#book-a-call">
-                <CalendarIcon /> Book a Call
+              <a className="theme-btn style2" href="#book-a-call">
+                Book a Call <i className="bi bi-calendar3"></i>
               </a>
             </div>
           </div>

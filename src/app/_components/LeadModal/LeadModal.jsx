@@ -122,7 +122,7 @@ export default function LeadModal({ open, onClose }) {
         <div className="lead-modal-main">
           <h2 id="lead-modal-title" className="lead-modal-title">Start your project today</h2>
           <p className="lead-modal-sub">Free estimate · No commitment · 100% confidential</p>
-          <LeadFormFields idPrefix="modal" buttonLabel="Get My Free Estimate" twoColumn />
+          <LeadFormFields idPrefix="modal" buttonLabel="Get My Free Estimate" twoColumn projectDetails />
         </div>
       </div>
     </div>

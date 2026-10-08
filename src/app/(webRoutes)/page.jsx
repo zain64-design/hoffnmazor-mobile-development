@@ -13,6 +13,7 @@ import LeadModalHost from '@/app/_components/LeadModal/LeadModalHost';
 import CalendlySection from '@/app/_components/Calendly/CalendlySection';
 import CtaBand from '@/app/_components/CtaBand/CtaBand';
 import WhatsAppFloat from '@/app/_components/WhatsAppFloat/WhatsAppFloat';
+import { PHONE_NUMBER } from '@/app/_utils/siteConfig';
 
 const page = () => {
     return (
@@ -78,8 +79,8 @@ const page = () => {
                 subtitle="Let's Talk"
                 title="Ready To Launch Your App? Let's Build It Together!"
                 content="Book a free consultation with our experts and get a clear roadmap, timeline and estimate for your app idea."
-                btnurl1=""
-                btnurl2=""
+                btnurl1="#book-a-call"
+                btnurl2={`tel:${PHONE_NUMBER}`}
                 img="/assets/images/cta/ctaThumb1_1.png"
             />
             <ContactInfo />

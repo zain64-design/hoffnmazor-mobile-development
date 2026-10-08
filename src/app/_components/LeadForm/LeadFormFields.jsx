@@ -1,15 +1,45 @@
 "use client";
-import useLeadForm from "@/app/_utils/useLeadForm";
+import useLeadForm, { BUDGET_OPTIONS, TIMELINE_OPTIONS } from "@/app/_utils/useLeadForm";
 import LeadPhoneField from "./LeadPhoneField";
 
 export default function LeadFormFields({
   idPrefix,
   buttonLabel = "Send Message",
   twoColumn = false,
+  projectDetails = false,
 }) {
-  const { formik, submitStatus } = useLeadForm();
+  const { formik, submitStatus } = useLeadForm({ projectDetails });
   const half = twoColumn ? "col-md-6" : "col-12";
   const id = (name) => `${idPrefix}-${name}`;
+
+  const selectField = (name, label, placeholder, options) => (
+    <div className={half}>
+      <div className="form-clt">
+        <label htmlFor={id(name)}>{label}</label>
+        <select
+          id={id(name)}
+          name={name}
+          className="lead-select"
+          required
+          value={formik.values[name]}
+          onChange={formik.handleChange}
+          onBlur={formik.handleBlur}
+        >
+          <option value="" disabled>
+            {placeholder}
+          </option>
+          {options.map((o) => (
+            <option key={o} value={o}>
+              {o}
+            </option>
+          ))}
+        </select>
+        {formik.touched[name] && formik.errors[name] && (
+          <p className="text-danger small mt-1">{formik.errors[name]}</p>
+        )}
+      </div>
+    </div>
+  );
 
   return (
     <form
@@ -66,6 +96,13 @@ export default function LeadFormFields({
             )}
           </div>
         </div>
+
+        {projectDetails && (
+          <>
+            {selectField("budget", "Estimated Budget*", "Select a range...", BUDGET_OPTIONS)}
+            {selectField("timeline", "Project Timeline*", "When to start?", TIMELINE_OPTIONS)}
+          </>
+        )}
 
         <div className="col-12">
           <div className="form-clt">

@@ -5,7 +5,7 @@ import { useFormik } from "formik";
 import * as Yup from "yup";
 
 // Same schema and messages as ContactForm.jsx
-const validationSchema = Yup.object({
+const baseSchema = {
   name: Yup.string()
     .trim()
     .min(2, "Name must be at least 2 characters")
@@ -19,7 +19,30 @@ const validationSchema = Yup.object({
     .trim()
     .min(10, "Please provide more details (minimum 10 char)")
     .required("Please tell us about your app idea"),
-});
+};
+
+// Extra fields used by the popup form.
+const projectSchema = {
+  budget: Yup.string().required("Please select your estimated budget"),
+  timeline: Yup.string().required("Please select a project timeline"),
+};
+
+export const BUDGET_OPTIONS = [
+  "Under $5,000",
+  "$5,000 - $15,000",
+  "$15,000 - $30,000",
+  "$30,000 - $50,000",
+  "$50,000+",
+  "Not sure yet",
+];
+
+export const TIMELINE_OPTIONS = [
+  "As soon as possible",
+  "Within 1 month",
+  "1 - 3 months",
+  "3 - 6 months",
+  "Just exploring",
+];
 
 const emptyGeo = { ip: "", city: "", country: "", zip_code: "" };
 
@@ -48,7 +71,7 @@ function getGeo() {
   return geoPromise;
 }
 
-export default function useLeadForm() {
+export default function useLeadForm({ projectDetails = false } = {}) {
   const router = useRouter();
   const [submitStatus, setSubmitStatus] = useState("idle");
 
@@ -63,8 +86,11 @@ export default function useLeadForm() {
       phone: "",
       email: "",
       about: "",
+      ...(projectDetails ? { budget: "", timeline: "" } : {}),
     },
-    validationSchema,
+    validationSchema: Yup.object(
+      projectDetails ? { ...baseSchema, ...projectSchema } : baseSchema
+    ),
     onSubmit: async (values, { setSubmitting, resetForm }) => {
       setSubmitStatus("idle");
       try {
@@ -77,7 +103,13 @@ export default function useLeadForm() {
         formData.append("name", values.name.trim());
         formData.append("phone", values.phone.trim());
         formData.append("email", values.email.trim());
-        formData.append("message", values.about.trim());
+        // The lead API only accepts fixed fields, so budget and timeline
+        // travel inside the message.
+        let message = values.about.trim();
+        if (projectDetails) {
+          message += `\n\nEstimated budget: ${values.budget}\nProject timeline: ${values.timeline}`;
+        }
+        formData.append("message", message);
         formData.append("ip", geoData.ip);
         formData.append("city", geoData.city);
         formData.append("country", geoData.country);

@@ -11751,11 +11751,30 @@ textarea.is-invalid {
 .lead-modal .text-success {
   color: var(--theme) !important;
 }
-.lead-modal .lead-form-btn {
-  height: 54px;
-  border-radius: 12px;
-  background: linear-gradient(90deg, var(--theme), #6fe7f7);
-  box-shadow: 0 10px 30px rgba(2, 227, 195, 0.25);
+.lead-modal .lead-select {
+  height: 52px;
+  line-height: 50px;
+  padding: 0 40px 0 20px;
+  border-radius: 5px;
+  border-color: rgba(255, 255, 255, 0.12);
+  background-color: rgba(255, 255, 255, 0.04);
+  background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='12' height='8' viewBox='0 0 12 8'%3E%3Cpath d='M1 1l5 5 5-5' fill='none' stroke='%23cbcbcb' stroke-width='2' stroke-linecap='round'/%3E%3C/svg%3E");
+  background-repeat: no-repeat;
+  background-position: right 16px center;
+  color: var(--white);
+  appearance: none;
+  -webkit-appearance: none;
+}
+.lead-modal .lead-select:focus {
+  border-color: var(--theme);
+  background-color: rgba(255, 255, 255, 0.06);
+}
+.lead-modal .lead-select:invalid {
+  color: #8a8f99;
+}
+.lead-modal .lead-select option {
+  color: var(--title);
+  background: var(--white);
 }
 @media (max-width: 991px) {
   .lead-modal-dialog {
@@ -11787,7 +11806,7 @@ textarea.is-invalid {
    ============================================================ */
 .calendly-section {
   padding: 100px 0;
-  background: linear-gradient(135deg, #0f2a30 0%, var(--bg-1) 100%);
+  background: linear-gradient(135deg, var(--bg-1) 0%, var(--bg-1) 100%);
 }
 .calendly-section .calendly-title {
   color: var(--white);
@@ -11901,59 +11920,22 @@ textarea.is-invalid {
 /* ============================================================
    LP conversion: CTA bands (.cta-band)
    ============================================================ */
-.cta-band .cta-band-btn {
-  display: inline-flex;
-  align-items: center;
-  justify-content: center;
-  gap: 8px;
-  height: 48px;
-  padding: 0 22px;
-  border-radius: 10px;
-  border: 1px solid transparent;
-  font-family: "Urbanist", sans-serif;
-  font-size: 16px;
-  font-weight: 700;
-  line-height: 1;
+.cta-band .theme-btn {
   white-space: nowrap;
-  text-decoration: none;
-  transition: transform 0.2s ease, background-color 0.2s ease, color 0.2s ease, border-color 0.2s ease;
 }
-.cta-band .cta-band-btn:hover {
-  transform: translateY(-2px);
-}
-.cta-band .cta-band-btn-primary {
-  background: var(--theme);
-  color: var(--title);
-}
-.cta-band .cta-band-btn-primary:hover {
-  background: var(--white);
-  color: var(--title);
-}
-.cta-band .cta-band-btn-outline {
-  background: transparent;
-  border-color: var(--white);
+/* style2 is drawn for light backgrounds; give it light text on the dark band */
+.cta-band .theme-btn.style2 {
   color: var(--white);
+  border-color: rgba(255, 255, 255, 0.45);
 }
-.cta-band .cta-band-btn-outline:hover {
-  border-color: var(--theme);
-  color: var(--theme);
-}
-.cta-band .cta-band-btn-light {
-  background: var(--white);
-  color: var(--title);
-}
-.cta-band .cta-band-btn-light:hover {
-  background: var(--theme);
-  color: var(--title);
-}
-.cta-band .cta-band-btn:focus-visible {
+.cta-band .theme-btn:focus-visible {
   outline: 2px solid var(--theme);
   outline-offset: 3px;
 }
 
 /* Full-width band */
 .cta-band-full {
-  background: linear-gradient(90deg, var(--black) 0%, var(--bg-1) 100%);
+  background: linear-gradient(90deg, var(--bg-1) 0%, var(--bg-1) 100%);
   border-top: 4px solid var(--theme);
   border-bottom: 4px solid var(--theme);
   padding: 44px 0;
@@ -11996,7 +11978,7 @@ textarea.is-invalid {
   padding: 20px 28px;
   border-radius: 14px;
   border: 1px solid rgba(2, 227, 195, 0.35);
-  background: linear-gradient(90deg, var(--bg-1) 0%, var(--bg-title) 100%);
+  background: linear-gradient(90deg, var(--bg-1) 0%, var(--bg-1) 100%);
 }
 .cta-band-slim .cta-band-bar-text {
   display: flex;
@@ -12027,9 +12009,14 @@ textarea.is-invalid {
   .cta-band-full .cta-band-title {
     font-size: 24px;
   }
-  .cta-band-full .cta-band-actions,
-  .cta-band-full .cta-band-btn {
+  .cta-band-full .cta-band-actions {
     width: 100%;
+  }
+  .cta-band-full .theme-btn,
+  .cta-band-slim .theme-btn {
+    max-width: none;
+    width: 100%;
+    justify-content: center;
   }
   .cta-band-slim {
     padding: 30px 0;
@@ -12042,14 +12029,6 @@ textarea.is-invalid {
   .cta-band-slim .cta-band-bar-text {
     font-size: 17px;
     align-items: flex-start;
-  }
-}
-@media (prefers-reduced-motion: reduce) {
-  .cta-band .cta-band-btn {
-    transition: none;
-  }
-  .cta-band .cta-band-btn:hover {
-    transform: none;
   }
 }
 .calendly-section {
