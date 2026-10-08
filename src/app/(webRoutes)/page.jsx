@@ -9,6 +9,7 @@ import Testimonial from '@/app/_components/Testimonial/Testimonial';
 import ContactInfo from '@/app/_components/ContactInfo/ContactInfo';;
 import Cta1 from '@/app/_components/Cta/Cta1';
 import HeroForm from '@/app/_components/HeroForm/HeroForm';
+import LeadModalHost from '@/app/_components/LeadModal/LeadModalHost';
 
 const page = () => {
     return (
@@ -43,6 +44,7 @@ const page = () => {
                 btnurl="/"
             />
             <HowWork />
+            <div id="modal-trigger"></div>
             <Choose1
                 subtitle="Why Choose Us"
                 title="Get Ahead With A High-Performance Mobile App"
@@ -70,6 +72,7 @@ const page = () => {
                 img="/assets/images/cta/ctaThumb1_1.png"
             />
             <ContactInfo />
+            <LeadModalHost />
         </div>
     );
 };
