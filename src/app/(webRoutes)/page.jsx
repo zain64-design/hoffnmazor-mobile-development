@@ -10,6 +10,7 @@ import ContactInfo from '@/app/_components/ContactInfo/ContactInfo';;
 import Cta1 from '@/app/_components/Cta/Cta1';
 import HeroForm from '@/app/_components/HeroForm/HeroForm';
 import LeadModalHost from '@/app/_components/LeadModal/LeadModalHost';
+import CalendlySection from '@/app/_components/Calendly/CalendlySection';
 
 const page = () => {
     return (
@@ -45,6 +46,7 @@ const page = () => {
             />
             <HowWork />
             <div id="modal-trigger"></div>
+            <CalendlySection />
             <Choose1
                 subtitle="Why Choose Us"
                 title="Get Ahead With A High-Performance Mobile App"
