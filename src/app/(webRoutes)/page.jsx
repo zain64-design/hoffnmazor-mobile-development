@@ -11,6 +11,7 @@ import Cta1 from '@/app/_components/Cta/Cta1';
 import HeroForm from '@/app/_components/HeroForm/HeroForm';
 import LeadModalHost from '@/app/_components/LeadModal/LeadModalHost';
 import CalendlySection from '@/app/_components/Calendly/CalendlySection';
+import CtaBand from '@/app/_components/CtaBand/CtaBand';
 
 const page = () => {
     return (
@@ -44,9 +45,15 @@ const page = () => {
                 btnname="Book Consultation"
                 btnurl="/"
             />
+            <CtaBand
+                variant="band"
+                title="Ready To See Your App In Your Customers' Hands?"
+                text="Talk to our app experts for a free consultation, no obligation."
+            />
             <HowWork />
             <div id="modal-trigger"></div>
             <CalendlySection />
+            <CtaBand title="Have questions about building your app?" />
             <Choose1
                 subtitle="Why Choose Us"
                 title="Get Ahead With A High-Performance Mobile App"
@@ -63,6 +70,7 @@ const page = () => {
                 btnurl="/"
             />
             <Feature1 />
+            <CtaBand title="Ready to turn your idea into an app? Our team is one message away." />
             <Testimonial />
             <Faq1 />
             <Cta1

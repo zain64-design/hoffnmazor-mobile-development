@@ -11897,3 +11897,161 @@ textarea.is-invalid {
     height: 640px;
   }
 }
+
+/* ============================================================
+   LP conversion: CTA bands (.cta-band)
+   ============================================================ */
+.cta-band .cta-band-btn {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  gap: 8px;
+  height: 48px;
+  padding: 0 22px;
+  border-radius: 10px;
+  border: 1px solid transparent;
+  font-family: "Urbanist", sans-serif;
+  font-size: 16px;
+  font-weight: 700;
+  line-height: 1;
+  white-space: nowrap;
+  text-decoration: none;
+  transition: transform 0.2s ease, background-color 0.2s ease, color 0.2s ease, border-color 0.2s ease;
+}
+.cta-band .cta-band-btn:hover {
+  transform: translateY(-2px);
+}
+.cta-band .cta-band-btn-primary {
+  background: var(--theme);
+  color: var(--title);
+}
+.cta-band .cta-band-btn-primary:hover {
+  background: var(--white);
+  color: var(--title);
+}
+.cta-band .cta-band-btn-outline {
+  background: transparent;
+  border-color: var(--white);
+  color: var(--white);
+}
+.cta-band .cta-band-btn-outline:hover {
+  border-color: var(--theme);
+  color: var(--theme);
+}
+.cta-band .cta-band-btn-light {
+  background: var(--white);
+  color: var(--title);
+}
+.cta-band .cta-band-btn-light:hover {
+  background: var(--theme);
+  color: var(--title);
+}
+.cta-band .cta-band-btn:focus-visible {
+  outline: 2px solid var(--theme);
+  outline-offset: 3px;
+}
+
+/* Full-width band */
+.cta-band-full {
+  background: linear-gradient(90deg, var(--black) 0%, var(--bg-1) 100%);
+  border-top: 4px solid var(--theme);
+  border-bottom: 4px solid var(--theme);
+  padding: 44px 0;
+}
+.cta-band-full .cta-band-inner {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 24px;
+}
+.cta-band-full .cta-band-title {
+  color: var(--white);
+  font-size: 30px;
+  font-weight: 800;
+  line-height: 1.2;
+  margin-bottom: 6px;
+}
+.cta-band-full .cta-band-text {
+  color: var(--text2);
+  font-size: 16px;
+  margin: 0;
+}
+.cta-band-full .cta-band-actions {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 12px;
+}
+
+/* Slim bar */
+.cta-band-slim {
+  padding: 40px 0;
+}
+.cta-band-slim .cta-band-bar {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 20px;
+  max-width: 1040px;
+  margin: 0 auto;
+  padding: 20px 28px;
+  border-radius: 14px;
+  border: 1px solid rgba(2, 227, 195, 0.35);
+  background: linear-gradient(90deg, var(--bg-1) 0%, var(--bg-title) 100%);
+}
+.cta-band-slim .cta-band-bar-text {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  margin: 0;
+  color: var(--white);
+  font-size: 19px;
+  font-weight: 700;
+  line-height: 1.35;
+}
+.cta-band-slim .cta-band-icon {
+  flex: 0 0 auto;
+  color: var(--theme);
+  display: inline-flex;
+}
+
+@media (max-width: 1199px) {
+  .cta-band-full .cta-band-inner {
+    flex-direction: column;
+    align-items: flex-start;
+  }
+}
+@media (max-width: 767px) {
+  .cta-band-full {
+    padding: 36px 0;
+  }
+  .cta-band-full .cta-band-title {
+    font-size: 24px;
+  }
+  .cta-band-full .cta-band-actions,
+  .cta-band-full .cta-band-btn {
+    width: 100%;
+  }
+  .cta-band-slim {
+    padding: 30px 0;
+  }
+  .cta-band-slim .cta-band-bar {
+    flex-direction: column;
+    align-items: stretch;
+    padding: 20px;
+  }
+  .cta-band-slim .cta-band-bar-text {
+    font-size: 17px;
+    align-items: flex-start;
+  }
+}
+@media (prefers-reduced-motion: reduce) {
+  .cta-band .cta-band-btn {
+    transition: none;
+  }
+  .cta-band .cta-band-btn:hover {
+    transform: none;
+  }
+}
+.calendly-section {
+  scroll-margin-top: 80px;
+}
