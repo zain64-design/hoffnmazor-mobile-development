@@ -12,6 +12,7 @@ import HeroForm from '@/app/_components/HeroForm/HeroForm';
 import LeadModalHost from '@/app/_components/LeadModal/LeadModalHost';
 import CalendlySection from '@/app/_components/Calendly/CalendlySection';
 import CtaBand from '@/app/_components/CtaBand/CtaBand';
+import WhatsAppFloat from '@/app/_components/WhatsAppFloat/WhatsAppFloat';
 
 const page = () => {
     return (
@@ -83,6 +84,7 @@ const page = () => {
             />
             <ContactInfo />
             <LeadModalHost />
+            <WhatsAppFloat />
         </div>
     );
 };
