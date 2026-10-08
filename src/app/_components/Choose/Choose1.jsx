@@ -1,7 +1,11 @@
 import Image from "next/image";
 import Link from "next/link";
+import OpenModalButton from "@/app/_components/CtaBand/OpenModalButton";
 
-const Choose1 = ({subtitle,title,content,FeatureList,FeatureList2,btnname,btnurl}) => {
+
+const Choose1 = ({subtitle,title,content,FeatureList,FeatureList2,btnname,btnurl,btnModal}) => {
+    // btnModal: the button opens the lead popup instead of linking.
+    const Btn = btnModal ? OpenModalButton : Link;
     return (
         
         <section className="advantage-section fix">
@@ -31,7 +35,7 @@ const Choose1 = ({subtitle,title,content,FeatureList,FeatureList2,btnname,btnurl
                                             ))}
                                             </ul>
                                         </div>
-                                        <Link className="theme-btn wow fadeInUp" data-wow-delay=".6s" href={btnurl}> {btnname}
+                                        <Btn className="theme-btn wow fadeInUp" data-wow-delay=".6s" href={btnurl}> {btnname}
                                             <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16"
                                                 viewBox="0 0 16 16" fill="none">
                                                 <g clipPath="url(#clip0_43_54)">
@@ -45,7 +49,7 @@ const Choose1 = ({subtitle,title,content,FeatureList,FeatureList2,btnname,btnurl
                                                     </clipPath>
                                                 </defs>
                                             </svg>
-                                        </Link>
+                                        </Btn>
                                     </div>
                                 </div>
                                 <div className="col-xl-6 order-1 order-xl-2">

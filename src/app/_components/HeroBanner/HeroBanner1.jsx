@@ -1,8 +1,11 @@
 import parse from 'html-react-parser';
 import Image from 'next/image';
 import Link from 'next/link';
+import OpenModalButton from '@/app/_components/CtaBand/OpenModalButton';
 
-const HeroBanner1 = ({subtitle,title,content,btnname,btnurl,btntwo,btn2url,cusimg,cusnumber,cuscontent,rating,ratingcon,img,aside}) => {
+const HeroBanner1 = ({subtitle,title,content,btnname,btnurl,btntwo,btn2url,cusimg,cusnumber,cuscontent,rating,ratingcon,img,aside,btn2Modal}) => {
+    // btn2Modal: the second button opens the lead popup instead of linking.
+    const Btn2 = btn2Modal ? OpenModalButton : Link;
     return (
         <section className="intro-section">
         <div className="intro-container-wrapper style1">
@@ -41,7 +44,7 @@ const HeroBanner1 = ({subtitle,title,content,btnname,btnurl,btntwo,btn2url,cusim
                                             </svg>
 
                                         </Link>
-                                        <Link className="theme-btn style2 wow fadeInUp" data-wow-delay=".2s"
+                                        <Btn2 className="theme-btn style2 wow fadeInUp" data-wow-delay=".2s"
                                             href={btn2url}>{btntwo}
                                             <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16"
                                                 viewBox="0 0 16 16" fill="none">
@@ -56,7 +59,7 @@ const HeroBanner1 = ({subtitle,title,content,btnname,btnurl,btntwo,btn2url,cusim
                                                     </clipPath>
                                                 </defs>
                                             </svg>
-                                        </Link>
+                                        </Btn2>
                                     </div>
                                     <div className="fancy-box-wrapper style1">
                                         <div className="fancy-box style1 wow fadeInUp" data-wow-delay=".2s">

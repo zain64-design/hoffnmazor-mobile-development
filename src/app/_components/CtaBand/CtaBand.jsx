@@ -1,5 +1,5 @@
 import { PHONE_NUMBER } from "@/app/_utils/siteConfig";
-import OpenModalButton from "./OpenModalButton";
+import ChatNowButton from "./ChatNowButton";
 
 const HeadsetIcon = () => (
   <svg width="24" height="24" viewBox="0 0 24 24" fill="none" aria-hidden="true">
@@ -10,11 +10,11 @@ const HeadsetIcon = () => (
 
 // variant "band": full-width strip with title, text and three buttons.
 // variant "bar": slim rounded bar with one line of text and one button.
-const CtaBand = ({ variant = "bar", title, text, buttonLabel = "Get A Free Quote" }) => {
+const CtaBand = ({ variant = "bar", title, text }) => {
   const mainButton = (
-    <OpenModalButton className="theme-btn">
-      {buttonLabel} <i className="bi bi-arrow-right"></i>
-    </OpenModalButton>
+    <ChatNowButton className="theme-btn">
+      Chat Now <i className="bi bi-chat-dots"></i>
+    </ChatNowButton>
   );
 
   if (variant === "band") {
@@ -33,7 +33,7 @@ const CtaBand = ({ variant = "bar", title, text, buttonLabel = "Get A Free Quote
                   Call Now <i className="bi bi-telephone"></i>
                 </a>
               )}
-              <a className="theme-btn style2" href="#book-a-call">
+              <a className="theme-btn style3" href="#book-a-call">
                 Book a Call <i className="bi bi-calendar3"></i>
               </a>
             </div>

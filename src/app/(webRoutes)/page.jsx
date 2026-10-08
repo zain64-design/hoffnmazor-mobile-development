@@ -24,8 +24,8 @@ const page = () => {
                 content="Hoffnmazor designs and develops fast, secure and beautifully crafted iOS and Android apps for startups and growing businesses. From the first idea to the App Store launch, our team handles everything."
                 btnname="Talk To An Expert"
                 btnurl="/contact"
-                btntwo="Get A Quote"
-                btn2url="/about"
+                btntwo="Get A Free Quote"
+                btn2Modal
                 cusimg="/assets/images/intro/introProfileThumb1_1.png"
                 cusnumber="2,291"
                 cuscontent="Happy Customers"
@@ -44,8 +44,8 @@ const page = () => {
                     "Trusted by startups and businesses worldwide",
                     "Free consultation and project estimate",
                 ]}
-                btnname="Book Consultation"
-                btnurl="/"
+                btnname="Get A Free Quote"
+                btnModal
             />
             <CtaBand
                 variant="band"
@@ -68,8 +68,8 @@ const page = () => {
                     "Cloud Storage",
                     "Strong Security",
                 ]}
-                btnname="Get A Quote"
-                btnurl="/"
+                btnname="Get A Free Quote"
+                btnModal
             />
             <Feature1 />
             <CtaBand title="Ready to turn your idea into an app? Our team is one message away." />
