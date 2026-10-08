@@ -8,6 +8,7 @@ import Faq1 from '@/app/_components/Faq/Faq1';
 import Testimonial from '@/app/_components/Testimonial/Testimonial';
 import ContactInfo from '@/app/_components/ContactInfo/ContactInfo';;
 import Cta1 from '@/app/_components/Cta/Cta1';
+import HeroForm from '@/app/_components/HeroForm/HeroForm';
 
 const page = () => {
     return (
@@ -25,7 +26,7 @@ const page = () => {
                 cuscontent="Happy Customers"
                 rating="4.8/5"
                 ratingcon="Rating"
-                img="/assets/images/intro/introThumb1_1.png"
+                aside={<HeroForm />}
             />
             <About1
                 img1="/assets/images/about/aboutThumb1_1.png"

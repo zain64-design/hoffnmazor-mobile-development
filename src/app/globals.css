@@ -61,7 +61,7 @@ Description: Niotech - sass, App Landing Reactjs Template <
     --theme3: rgba(2, 177, 151, 0.06);
   --title: #282C32;
   --header: #282C32;
-  --orange: #e78c45;
+  --orange: #02e3c3;
   --text: #858585;
   --text2: #cbcbcb;
   --border: #E6E6E6;
@@ -11442,4 +11442,108 @@ textarea.is-invalid {
 .contact-form.style1 .contact-form-items .form-clt .iti__country-container,
 .contact-form.style1 .contact-form-items .form-clt .iti__dropdown-content span {
   color: var(--text);
+}
+
+/* ============================================================
+   LP conversion: Hero form (.hero-form)
+   Shared lead-form field styles live here too and are scoped
+   to .hero-form / .lead-modal so no existing rule changes.
+   ============================================================ */
+.hero-form .form-clt label,
+.lead-modal .form-clt label {
+  display: block;
+  margin-bottom: 6px;
+  color: var(--title);
+  font-size: 14px;
+  font-weight: 600;
+  text-transform: capitalize;
+}
+.hero-form .form-clt input,
+.hero-form .form-clt textarea,
+.lead-modal .form-clt input,
+.lead-modal .form-clt textarea {
+  border-radius: 5px;
+  height: 52px;
+}
+.hero-form .form-clt textarea,
+.lead-modal .form-clt textarea {
+  height: auto;
+  min-height: 84px;
+  resize: vertical;
+}
+.hero-form .form-clt .iti,
+.lead-modal .form-clt .iti {
+  width: 100%;
+  display: block;
+}
+.hero-form .form-clt .iti input,
+.lead-modal .form-clt .iti input {
+  width: 100%;
+  padding-right: 20px;
+}
+.hero-form .form-clt .iti__country-container,
+.lead-modal .form-clt .iti__country-container {
+  color: var(--text);
+}
+/* Same box as the real phone input, shown until intl-tel-input loads */
+.hero-form .lead-phone-placeholder,
+.lead-modal .lead-phone-placeholder {
+  pointer-events: none;
+}
+.hero-form .lead-form-btn,
+.lead-modal .lead-form-btn {
+  max-width: none;
+  width: 100%;
+}
+.hero-form .lead-form-btn:disabled,
+.lead-modal .lead-form-btn:disabled {
+  opacity: 0.7;
+  cursor: not-allowed;
+}
+
+.hero-form {
+  position: relative;
+  z-index: 5;
+  height: 100%;
+  display: flex;
+  align-items: center;
+  padding: 60px 0;
+}
+.hero-form-card {
+  width: 100%;
+  background: var(--white);
+  border-radius: 24px;
+  box-shadow: 0px 20px 50px 0px rgba(2, 177, 151, 0.14), var(--box-shadow);
+  padding: 32px 30px;
+}
+.hero-form-title {
+  color: var(--title);
+  font-size: 28px;
+  font-weight: 700;
+  line-height: 1.2;
+  margin-bottom: 6px;
+}
+.hero-form-desc {
+  color: var(--text);
+  font-size: 15px;
+  line-height: 1.5;
+  margin-bottom: 20px;
+}
+@media (max-width: 991px) {
+  .hero-form {
+    padding: 0 0 60px;
+    margin-top: -40px;
+  }
+}
+@media (max-width: 575px) {
+  .hero-form {
+    padding-bottom: 30px;
+  }
+  .hero-form-card {
+    padding: 24px 18px;
+    border-radius: 18px;
+  }
+  .hero-form-title {
+    font-size: 24px;
+  }
 }
