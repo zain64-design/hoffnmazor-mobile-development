@@ -17,7 +17,7 @@ import { PHONE_NUMBER } from '@/app/_utils/siteConfig';
 
 const page = () => {
     return (
-        <div>
+        <>
             <HeroBanner1
                 subtitle="<span>New!</span>Get Your App Built"
                 title="We Build Mobile Apps That Your Customers Love"
@@ -86,7 +86,7 @@ const page = () => {
             <ContactInfo />
             <LeadModalHost />
             <WhatsAppFloat />
-        </div>
+        </>
     );
 };
 

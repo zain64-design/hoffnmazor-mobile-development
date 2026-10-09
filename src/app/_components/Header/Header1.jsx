@@ -28,7 +28,7 @@ export default function Header1({ variant }) {
   }, [prevScrollPos]);
 
   return (
-    <div>
+    <>
       <header
         className={`cs_site_header header_style_2 cs_style_1 ${variant ? variant : ''
           } cs_sticky_header cs_site_header_full_width ${isSticky ? isSticky : ''}`}
@@ -62,7 +62,7 @@ export default function Header1({ variant }) {
           </div>
         </div>
       </header>
-    </div>
+    </>
 
   );
 }
