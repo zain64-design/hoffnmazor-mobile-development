@@ -6,11 +6,13 @@ import "./globals.css";
 
 const urbanist = Urbanist({
   subsets: ['latin'],
+  display: 'swap',
   weight: ['400', '500', '600', '700', '800', '900'],
   variable: '--body-color-font',
 });
 const nunito = Nunito({
   subsets: ['latin'],
+  display: 'swap',
   weight: ['400', '500', '600', '700', '800', '900'],
   variable: '--heading-font',
 });

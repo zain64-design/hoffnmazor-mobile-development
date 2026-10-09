@@ -83,7 +83,7 @@ const ContactInfo = () => {
                                     <a href="tel:+13122483053">Prefer to Talk?</a>
                                 </h3>
 
-                                <p className="text">Speak with an expert directly. We're available 24/7.</p>
+                                <p className="text">Speak with an expert directly. We&apos;re available 24/7.</p>
                             </div>
                         </div>
                     </div>

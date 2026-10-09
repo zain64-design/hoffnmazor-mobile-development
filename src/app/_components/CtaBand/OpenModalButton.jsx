@@ -1,7 +1,6 @@
 "use client";
 
 // `href` is accepted and ignored so this can stand in for a <Link>.
-// eslint-disable-next-line no-unused-vars
 export default function OpenModalButton({ className, children, href, ...rest }) {
   return (
     <button

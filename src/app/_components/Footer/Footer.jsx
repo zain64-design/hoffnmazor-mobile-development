@@ -5,9 +5,9 @@ const Footer = () => {
     return (
         <footer className="footer-section position-relative">
             <div className="footer-widgets-wrapper style1 fix">
-                <div className="shape1"><img src="/assets/images/shape/footerShape1_1.png" alt="shape" /></div>
-                <div className="shape2"><img src="/assets/images/shape/footerShape1_2.png" alt="shape" /></div>
-                <div className="shape3"><img src="/assets/images/shape/footerShape1_3.png" alt="shape" /></div>
+                <div className="shape1"><Image src="/assets/images/shape/footerShape1_1.png" alt="shape" width={237} height={710} /></div>
+                <div className="shape2"><Image src="/assets/images/shape/footerShape1_2.png" alt="shape" width={469} height={352} /></div>
+                <div className="shape3"><Image src="/assets/images/shape/footerShape1_3.png" alt="shape" width={667} height={710} /></div>
                 <div className="container">
                     <div className="footer-wrapper">
                         <Link href="/" className="footer-logo">

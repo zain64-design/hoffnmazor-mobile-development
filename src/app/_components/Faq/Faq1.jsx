@@ -2,15 +2,13 @@
 import { useRef } from "react";
 import SectionTitle from "../Common/SectionTitle";
 import { useState } from "react";
-import { useEffect } from "react";
 import data from '../../_data/faq1.json';
 import Image from "next/image";
 
 const Faq1 = () => {
 
     const accordionContentRef = useRef(null);
-    const [openItemIndex, setOpenItemIndex] = useState(-1);
-    const [firstItemOpen, setFirstItemOpen] = useState(true);
+    const [openItemIndex, setOpenItemIndex] = useState(0);
   
     const handleItemClick = index => {
       if (index === openItemIndex) {
@@ -19,12 +17,6 @@ const Faq1 = () => {
         setOpenItemIndex(index);
       }
     };
-    useEffect(() => {
-      if (firstItemOpen) {
-        setOpenItemIndex(0);
-        setFirstItemOpen(false);
-      }
-    }, [firstItemOpen]);
 
     const FaqContent = {
         Content:'Quick answers to the most common questions about our app development process.',
