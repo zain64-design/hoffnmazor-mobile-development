@@ -7,7 +7,6 @@ export default function LeadFormFields({
   buttonLabel = "Send Message",
   twoColumn = false,
   projectDetails = false,
-  className = "",
 }) {
   const { formik, submitStatus } = useLeadForm({ projectDetails });
   const half = twoColumn ? "col-md-6" : "col-12";
@@ -45,7 +44,7 @@ export default function LeadFormFields({
   return (
     <form
       id={id("form")}
-      className={`lead-form ${className}`.trim()}
+      className="lead-form"
       onSubmit={formik.handleSubmit}
       noValidate
     >

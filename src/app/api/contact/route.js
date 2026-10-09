@@ -1,5 +1,3 @@
-import { lookupGeo } from "../geo/lookup";
-
 export async function POST(request) {
   try {
     const formData = await request.formData();
@@ -8,21 +6,16 @@ export async function POST(request) {
     const phone = formData.get("phone")?.trim();
     const email = formData.get("email")?.trim();
     const message = formData.get("message")?.trim();
-    let ip = formData.get("ip")?.trim() || "";
-    let city = formData.get("city")?.trim() || "";
-    let country = formData.get("country")?.trim() || "";
-    let zip_code = formData.get("zip_code")?.trim() || "";
+    const ip = formData.get("ip")?.trim() || "";
+    const city = formData.get("city")?.trim() || "";
+    const country = formData.get("country")?.trim() || "";
+    const zip_code = formData.get("zip_code")?.trim() || "";
 
     if (!name || !phone || !email || !message) {
       return Response.json(
         { success: false, error: "Missing required fields" },
         { status: 400 },
       );
-    }
-
-    // Geo data from the browser can be missing (lookup not finished or failed).
-    if (!ip || !country) {
-      ({ ip, city, country, zip_code } = await lookupGeo(request));
     }
 
     const params = new URLSearchParams({
@@ -35,12 +28,11 @@ export async function POST(request) {
       country,
       zip_code,
       brand_name: "hoffnmazor.com",
-      lead_area: "https://hoffnmazor-mobile-development.vercel.app",
+      lead_area: "https://hoffnmazor-mobile-development.vercel.app/",
     });
 
     const controller = new AbortController();
-    // The lead server can take longer than 8s to respond.
-    const timeoutId = setTimeout(() => controller.abort(), 25000);
+    const timeoutId = setTimeout(() => controller.abort(), 8000);
 
     const res = await fetch(
       `https://leads.infinityprojectmanager.com/brand/hoffnmazor/lead?${params.toString()}`,

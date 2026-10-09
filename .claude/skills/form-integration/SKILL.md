@@ -119,7 +119,7 @@ export async function POST(request) {
 ```js
 export async function GET(request) {
   const ip = request.headers.get("x-forwarded-for")?.split(",")[0] ?? "";
-  const res = await fetch(`https://api.ipapi.is/?key=${key}`);
+  const res = await fetch(`https://api.ip2location.io/?key=${key}`);
   const data = await res.json();
   return Response.json({
     ip: data.ip || "",

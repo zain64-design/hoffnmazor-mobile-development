@@ -44,40 +44,31 @@ export const TIMELINE_OPTIONS = [
   "Just exploring",
 ];
 
-const emptyGeo = { ip: "", city: "", country: "", zip_code: "" };
-
-// Shared across every form on the page so /api/geo runs once.
-let geoPromise = null;
-
-function getGeo() {
-  if (typeof window === "undefined") return Promise.resolve(emptyGeo);
-  if (!geoPromise) {
-    geoPromise = new Promise((resolve) => {
-      const fetchGeo = () =>
-        fetch("/api/geo")
-          .then((r) => r.json())
-          .then((d) => resolve({ ...emptyGeo, ...d }))
-          .catch((err) => {
-            console.error("Geo fetch failed:", err);
-            resolve(emptyGeo);
-          });
-      if (document.readyState === "complete") {
-        fetchGeo();
-      } else {
-        window.addEventListener("load", fetchGeo, { once: true });
-      }
-    });
-  }
-  return geoPromise;
-}
-
 export default function useLeadForm({ projectDetails = false } = {}) {
   const router = useRouter();
-  const [submitStatus, setSubmitStatus] = useState("idle");
+  const [submitStatus, setSubmitStatus] = useState("idle"); // idle | success | error
+  const [geoData, setGeoData] = useState({
+    ip: "",
+    city: "",
+    country: "",
+    zip_code: "",
+  });
 
-  // Start the geo request after window load, not at submit time.
   useEffect(() => {
-    getGeo();
+    const fetchGeo = async () => {
+      try {
+        const d = await fetch("/api/geo").then((r) => r.json());
+        setGeoData(d);
+      } catch (err) {
+        console.error("Geo fetch failed:", err);
+      }
+    };
+    if (document.readyState === "complete") {
+      fetchGeo();
+    } else {
+      window.addEventListener("load", fetchGeo, { once: true });
+      return () => window.removeEventListener("load", fetchGeo);
+    }
   }, []);
 
   const formik = useFormik({
@@ -94,11 +85,6 @@ export default function useLeadForm({ projectDetails = false } = {}) {
     onSubmit: async (values, { setSubmitting, resetForm }) => {
       setSubmitStatus("idle");
       try {
-        // Don't let a slow geo lookup block the lead.
-        const geoData = await Promise.race([
-          getGeo(),
-          new Promise((r) => setTimeout(() => r(emptyGeo), 1500)),
-        ]);
         const formData = new FormData();
         formData.append("name", values.name.trim());
         formData.append("phone", values.phone.trim());
