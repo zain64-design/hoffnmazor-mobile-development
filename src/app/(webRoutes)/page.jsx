@@ -23,7 +23,7 @@ const page = () => {
                 title="We Build Mobile Apps That Your Customers Love"
                 content="Hoffnmazor designs and develops fast, secure and beautifully crafted iOS and Android apps for startups and growing businesses. From the first idea to the App Store launch, our team handles everything."
                 btnname="Talk To An Expert"
-                btnurl="/contact"
+                btnurl="#book-a-call"
                 btntwo="Get A Free Quote"
                 btn2Modal
                 cusimg="/assets/images/intro/introProfileThumb1_1.png"

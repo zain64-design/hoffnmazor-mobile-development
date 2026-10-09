@@ -1,6 +1,5 @@
 import parse from 'html-react-parser';
 import Image from 'next/image';
-import Link from 'next/link';
 import OpenModalButton from '@/app/_components/CtaBand/OpenModalButton';
 
 const HeroBanner1 = ({subtitle,title,content,btnname,btnurl,btntwo,btn2url,cusimg,cusnumber,cuscontent,rating,ratingcon,img,aside,btn2Modal}) => {
@@ -28,7 +27,7 @@ const HeroBanner1 = ({subtitle,title,content,btnname,btnurl,btntwo,btn2url,cusim
                                         <p className="intro-desc wow fadeInUp" data-wow-delay=".4s">{content}</p>
                                     </div>
                                     <div className="btn-wrapper style1 wow fadeInUp" data-wow-delay=".6s">
-                                        <Link className="theme-btn" href={btnurl}>{btnname}
+                                        <a className="theme-btn" href={btnurl}>{btnname}
                                             <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16"
                                                 viewBox="0 0 16 16" fill="none">
                                                 <g clipPath="url(#clip0_11_22)">
@@ -43,7 +42,7 @@ const HeroBanner1 = ({subtitle,title,content,btnname,btnurl,btntwo,btn2url,cusim
                                                 </defs>
                                             </svg>
 
-                                        </Link>
+                                        </a>
                                         <Btn2 className="theme-btn style2 wow fadeInUp" data-wow-delay=".2s"
                                             href={btn2url}>{btntwo}
                                             <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16"

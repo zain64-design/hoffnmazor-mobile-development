@@ -2,6 +2,7 @@
 import { useEffect, useState } from 'react';
 import Link from 'next/link';
 import Image from 'next/image';
+import { PHONE_NUMBER } from "@/app/_utils/siteConfig";
 export default function Header1({ variant }) {
   const [isSticky, setIsSticky] = useState();
   const [prevScrollPos, setPrevScrollPos] = useState(0);
@@ -42,19 +43,19 @@ export default function Header1({ variant }) {
               </div>
               <div className="cs_main_header_right">
                 <div className="header-btn d-flex align-items-center gap-3">
-                  <Link href="void:;" className="theme-btn style2">
+                  <a href="#book-a-call" className="theme-btn style2">
                     <span>
                       Book Consultation
                       <i className="bi bi-arrow-right"></i>
                     </span>
-                  </Link>
+                  </a>
 
-                  <Link href="void:;" className="theme-btn">
+                  <a href={`tel:${PHONE_NUMBER}`} className="theme-btn">
                     <span>
-                      Get Started
+                      Call Now
                       <i className="bi bi-arrow-right"></i>
                     </span>
-                  </Link>
+                  </a>
                 </div>
               </div>
             </div>

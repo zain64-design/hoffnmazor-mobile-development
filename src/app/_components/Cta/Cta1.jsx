@@ -1,5 +1,4 @@
 import Image from "next/image";
-import Link from "next/link";
 
 const Cta1 = ({subtitle,title,content,btnurl1,btnurl2,img}) => {
     return (
@@ -28,8 +27,8 @@ const Cta1 = ({subtitle,title,content,btnurl1,btnurl2,img}) => {
                                                 {content}</p>
                                         </div>
                                         <div className="d-flex gap-3">
-                                            <Link className="playstore theme-btn style3" href={btnurl1}>Book Consultation</Link>
-                                        <Link className="theme-btn style3" href={btnurl2}>Call Now</Link>
+                                            <a className="playstore theme-btn style3" href={btnurl1}>Book Consultation</a>
+                                        <a className="theme-btn style3" href={btnurl2}>Call Now</a>
                                         </div>
                                     </div>
                                 </div>

@@ -69,7 +69,7 @@ Description: Niotech - sass, App Landing Reactjs Template <
   --border-3: #D8D8D8;
   --border-4: #E0E0E0;
   --border-5: #565656;
-  --bg-1: #161921;
+  --bg-1: #303030;
   --bg-2: #F6F7FF;
   --bg-title: #303030;
   --box-shadow: 0px 4px 25px 0px rgba(0, 0, 0, 0.06);
@@ -516,7 +516,7 @@ input[type=radio]:checked ~ label::before {
 }
 .theme-btn.style3 i, .theme-btn.style3 svg {
   margin-left: 6px;
-  color: var(--white);
+  color: inherit;
 }
 .theme-btn.style3:before {
   transition-duration: 800ms;
@@ -11924,14 +11924,14 @@ textarea.is-invalid {
   white-space: nowrap;
 }
 /* style2 is drawn for light backgrounds; give it light text on the dark band */
-.cta-band .theme-btn.style2 {
+/* .cta-band .theme-btn.style2 {
   color: var(--white);
   border-color: rgba(255, 255, 255, 0.45);
 }
 .cta-band .theme-btn:focus-visible {
   outline: 2px solid var(--theme);
   outline-offset: 3px;
-}
+} */
 
 /* Full-width band */
 .cta-band-full {
