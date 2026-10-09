@@ -7,8 +7,6 @@ export async function lookupGeo(request) {
   const ip = forwarded && !PRIVATE_IP.test(forwarded) ? forwarded : "";
 
   const params = new URLSearchParams({ key: process.env.IP2LOCATION_API_KEY ?? "" });
-  // Without an ip param ip2location uses the caller's public IP (local dev).
-  if (ip) params.set("ip", ip);
 
   try {
     const res = await fetch(`https://api.ip2location.io/?${params.toString()}`, {
@@ -16,6 +14,10 @@ export async function lookupGeo(request) {
       signal: AbortSignal.timeout(5000),
     });
     const data = await res.json();
+    // ip2location answers a missing/bad key or no credit with {"error": {...}}.
+    if (data.error) {
+      console.error("Geo lookup error:", data.error.error_message);
+    }
     return {
       ip: clean(data.ip) || ip,
       city: clean(data.city_name),
