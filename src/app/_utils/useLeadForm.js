@@ -4,7 +4,7 @@ import { useRouter } from "next/navigation";
 import { useFormik } from "formik";
 import * as Yup from "yup";
 
-// Same schema and messages as ContactForm.jsx
+// Shared by every lead form: hero, popup and contact section.
 const baseSchema = {
   name: Yup.string()
     .trim()

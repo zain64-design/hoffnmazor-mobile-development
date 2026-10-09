@@ -3345,7 +3345,8 @@ input[type=number] {
 .contact-form.style1 .contact-form-items {
   margin-top: 30px;
 }
-.contact-form.style1 .contact-form-items .form-clt span {
+.contact-form.style1 .contact-form-items .form-clt label {
+  display: block;
   color: var(--title);
   font-weight: 600;
   text-transform: capitalize;
@@ -3799,8 +3800,7 @@ textarea.is-invalid {
   height: 56px;
   padding-right: 20px;
 }
-.contact-form.style1 .contact-form-items .form-clt .iti__country-container,
-.contact-form.style1 .contact-form-items .form-clt .iti__dropdown-content span {
+.contact-form.style1 .contact-form-items .form-clt .iti__country-container {
   color: var(--text);
 }
 
@@ -3847,7 +3847,8 @@ textarea.is-invalid {
 }
 /* Same box as the real phone input, shown until intl-tel-input loads */
 .hero-form .lead-phone-placeholder,
-.lead-modal .lead-phone-placeholder {
+.lead-modal .lead-phone-placeholder,
+.contact-form-items .lead-phone-placeholder {
   pointer-events: none;
 }
 .hero-form .lead-form-btn,
@@ -3856,7 +3857,8 @@ textarea.is-invalid {
   width: 100%;
 }
 .hero-form .lead-form-btn:disabled,
-.lead-modal .lead-form-btn:disabled {
+.lead-modal .lead-form-btn:disabled,
+.contact-form-items .lead-form-btn:disabled {
   opacity: 0.7;
   cursor: not-allowed;
 }

@@ -1,5 +1,5 @@
 import Image from 'next/image';
-import ContactForm from './ContactForm';
+import LeadFormFields from '../LeadForm/LeadFormFields';
 const ContactInfo = () => {
     return (
         <div>
@@ -107,7 +107,7 @@ const ContactInfo = () => {
                             </h2>
                             <p className="desc">Tell us about your project and our team will get back to you shortly with the next steps.</p>
 
-                            <ContactForm />
+                            <LeadFormFields idPrefix="contact" className="contact-form-items" twoColumn />
                         </div>
                     </div>
                 </div>
