@@ -4402,7 +4402,7 @@ textarea.is-invalid {
    ============================================================ */
 .wa-float {
   position: fixed;
-  right: calc(20px + env(safe-area-inset-right, 0px));
+  left: calc(20px + env(safe-area-inset-left, 0px));
   bottom: calc(20px + env(safe-area-inset-bottom, 0px));
   z-index: 9000;
   width: 58px;
@@ -4418,7 +4418,7 @@ textarea.is-invalid {
 }
 .wa-float:hover,
 .wa-float:focus-visible {
-  color: var(--white);
+  color: var(--white) !important;
   transform: scale(1.08);
   box-shadow: 0 10px 28px rgba(37, 211, 102, 0.55);
 }
