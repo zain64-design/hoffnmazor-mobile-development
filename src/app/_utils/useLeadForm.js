@@ -89,13 +89,11 @@ export default function useLeadForm({ projectDetails = false } = {}) {
         formData.append("name", values.name.trim());
         formData.append("phone", values.phone.trim());
         formData.append("email", values.email.trim());
-        // The lead API only accepts fixed fields, so budget and timeline
-        // travel inside the message.
-        let message = values.about.trim();
+        formData.append("message", values.about.trim());
         if (projectDetails) {
-          message += `\n\nEstimated budget: ${values.budget}\nProject timeline: ${values.timeline}`;
+          formData.append("budget", values.budget);
+          formData.append("timeline", values.timeline);
         }
-        formData.append("message", message);
         formData.append("ip", geoData.ip);
         formData.append("city", geoData.city);
         formData.append("country", geoData.country);

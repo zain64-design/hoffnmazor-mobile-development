@@ -10,6 +10,9 @@ export async function POST(request) {
     const city = formData.get("city")?.trim() || "";
     const country = formData.get("country")?.trim() || "";
     const zip_code = formData.get("zip_code")?.trim() || "";
+    // Only sent by the popup form.
+    const budget = formData.get("budget")?.trim() || "";
+    const timeline = formData.get("timeline")?.trim() || "";
 
     if (!name || !phone || !email || !message) {
       return Response.json(
@@ -30,6 +33,8 @@ export async function POST(request) {
       brand_name: "hoffnmazor.com",
       lead_area: "https://hoffnmazor-mobile-development.vercel.app/",
     });
+    if (budget) params.append("budget", budget);
+    if (timeline) params.append("timeline", timeline);
 
     const controller = new AbortController();
     const timeoutId = setTimeout(() => controller.abort(), 8000);

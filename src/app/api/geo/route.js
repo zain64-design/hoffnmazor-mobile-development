@@ -11,10 +11,14 @@ export async function GET(request) {
     `https://api.ip2location.io/?key=${key}${ip ? `&ip=${ip}` : ""}`,
   );
   const data = await res.json();
+  // A missing/invalid key or no credit comes back as {"error": {...}}.
+  if (data.error) {
+    console.error("Geo lookup error:", data.error.error_message);
+  }
   // ip2location returns "-" for fields it can't resolve.
   const clean = (v) => (v && v !== "-" ? v : "");
   return Response.json({
-    ip: clean(data.ip),
+    ip: clean(data.ip) || ip,
     city: clean(data.city_name),
     country: clean(data.country_name),
     zip_code: clean(data.zip_code),
