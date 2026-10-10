@@ -1,7 +1,12 @@
+// Localhost and LAN addresses can't be located.
+const PRIVATE_IP = /^(::1$|::ffff:127\.|127\.|10\.|192\.168\.|172\.(1[6-9]|2\d|3[01])\.|fc|fd|fe80:)/i;
+
 export async function GET(request) {
-  const ip = request.headers.get("x-forwarded-for")?.split(",")[0] ?? "";
+  const forwarded = request.headers.get("x-forwarded-for")?.split(",")[0]?.trim() ?? "";
+  const ip = PRIVATE_IP.test(forwarded) ? "" : forwarded;
   const key = process.env.IP2LOCATION_API_KEY;
-  // Without ip, ip2location returns the server's location, not the visitor's.
+  // With ip, ip2location locates the visitor. Without it (local dev), it
+  // locates the caller's own public IP.
   const res = await fetch(
     `https://api.ip2location.io/?key=${key}${ip ? `&ip=${ip}` : ""}`,
   );
